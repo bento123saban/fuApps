@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/8ff03879d1.js" crossorigin="anonymous"></script>
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <img src="logo.jpg" alt="">
+    <p>Follow Up Apps</p>
+    <i data-control="off" onclick="fuControl(this)" class="fas fa-plus"></i>
+  </nav>
+  
+  <div id="addForm">
+    <h4 style="text-align: center;">ADD FU DATA</h4> 
+    
+    <input type="text" name="nama_cust" id="nama_cust" placeholder="Nama Cust" required>&nbsp;<button class="salin" data-salin="nama"><i class="fas fa-copy"></i></button><br>
+    <input type="number" name="telp" id="telp" placeholder="No. HP" required value="08">&nbsp;<button class="salin" data-salin="telp"><i class="fas fa-copy"></i></button><br>
+    <input type="text" id="alamat" name="alamat" placeholder="Alamat/Instansi" required>&nbsp;<button class="salin" data-salin="alamat"><i class="fas fa-copy"></i></button><br>
+    <input type="color" id="warna" value="#fff">
+    <p style="font-size: 14px; margin-bottom: 0;">Estimasi Transaksi</p>
+    <input type="date" id="at_tx" name="at_tx" placeholder="Estimasi Trx"><br>
+    <textarea name="note" id="note" cols="47" rows="7" placeholder="Note....."></textarea><br>//
+    <label for="barang">Barang &nbsp</label> <button id="add-list"><i class="fas fa-plus"></i></button> <label id="total_semua" style="float: right; margin-right: 10px;">Rp. 0</label>
+    <div id="list_brg">
+      <div class="list_grup" id="list_grup">
+        <hr>
+        <input type="text" class="artikel" placeholder="Artikel" style="width: 100px;">
+        <input type="text" class="nama_brg" placeholder="Nama" style="width: 265px;"><br>
+        <input type="number" class="value" placeholder="Harga" style="width: 100px" min="0" step="any">
+        <input type="number" class="qty" placeholder="Quantity" style="width: 70px;" value=1>
+        <input type="" class="tot-hrg" placeholder="Total" readonly style="width: 175px;">
+        <button class="delete-list"><i class="fas fa-trash"></i></button>
+      </div>
+    </div>
+    <hr>
+    <br>
+    <button id="add" data-proses="save" onclick="save(this)">Simpan</button> <button id="reset" style="display: none;" onclick="location.reload();">Batal</button>
+  </div>
+  
+  
+  <section class="search-tab">
+    <h4 style="text-align: center;">FOLLOW UP LIST</h4>
+    <div class="tab-1">
+      <i class="fas fa-list-ul" data-show="all" id="all-list"></i>
+      <i data-show="calendar" class="fas fa-calendar-alt"></i>
+      <i data-show="user" class="fas fa-user on"></i>
+      <i data-show="goods" class="fas fa-boxes"></i>
+      <i data-show="colors" class="fas fa-palette"></i>
+    </div>
+    <div class="tab-2">
+      <div data-show="calendar" class="calendar tabs">
+        <div class="cal-1">
+          <input type="date" name="From" id="From">
+          <label> TO </label>
+          <input type="date" name="To" id="To">
+        </div>
+        <div class="cal-2">
+          <div>
+            <input type="radio" name="dateOf" id="dateIn" value="in" checked> Date In
+          </div>
+          <div>
+            <input type="radio" name="dateOf" id="dateOut" value="out"> Date Out
+          </div>
+        </div>
+        <button id="search-date"><i class="fas fa-search"></i></button>
+      </div>
+      <div data-show="user" class="user tabs">
+        <input id="search-nama" type="text" placeholder="Nama atau alamat cust .....">
+      </div>
+      <div data-show="goods" class="goods tabs">
+        <input id="search-barang" type="text" placeholder="Kode atau nama barang .....">
+        <button id="search-goods"><i class="fas fa-search"></i></button>
+      </div>
+      
+      <div data-show="colors" class="colorers tabs" id="colorers">
+      </div>
+    </div>
+  </section>
+  <br><br><br>
+  
+  <div id="FUX_List">
+  </div>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+* {
+  box-sizing: border-box;
+}
+body {
+    font-size: 15pt;
+    color: #144371;
+    scroll-behavior: smooth;
+    margin:0;
+    padding: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background: #144371;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav img {
+  height: 50px;
+}
+
+nav p {
+  margin: auto;
+  color: Whitesmoke;
+}
+
+nav i {
+  margin: auto 10px;
+  padding: 3.5px;
+  border: 2px solid white;
+  color: white;
+  border-radius: 4px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#addForm {
+  margin: 4px 0;
+  padding: 4px;
+  display: none;
+}
+
+#addForm input, #addForm textarea{
+  width: 90%;
+  padding: 5px 8px;
+  border: 2px solid #144371;
+  border-radius: 3px;
+  margin: 3px 0;
+  font-size: 1.02rem;
+  background: transparent !important;
+  backdrop-filter: blur(12px);
+}
+
+
+input#warna {
+  padding: 0 !important;
+  border: none !important;
+}
+
+
+#addForm button {
+  padding: 5px 7px;
+  border: 2px solid #144371;
+  font-size: 1rem;
+  color: #144371;
+  border-radius: 5px;
+}
+
+
+.box {
+  position: relative;
+  margin: 10px 0;
+  border: 2px solid #144371;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+#FUX_List {
+  padding: 0 5px;
+  margin: 0;
+}
+
+
+#list_grup input {
+  padding: 3px 5px;
+}
+
+.list{
+  position: relative;
+  display: flex;
+  border-bottom: 2px solid #144371;
+  padding-bottom: 2px;
+}
+.list .list-left {
+  width: 70%;
+}
+.list h4 {
+  padding: 0;
+  margin: 0;
+}
+p.fu_telp{
+  font-size: 14px;
+  margin: 3px 0;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+
+.list .list-right {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  text-align: right;
+  border-left: 2px solid #144371 ;
+}
+
+.list-2 {
+  border-bottom: 2px solid #144371;
+  padding: 5px 0;
+}
+.list-2 h6 {
+  margin: 4px 0;
+  text-align: center;
+  /* border-bottom: 2px solid #144371; */
+}
+.list-2 p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.list-3 {
+  padding: 5px 0;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 0 0 6px 6px;
+}
+.list-3 a {
+  text-decoration: none !important;
+}
+
+.list-3 i {
+  height: 30px;
+  width: 30px;
+  color: white;
+  border: 2px solid white;
+  background: #144371;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.list-3 i.on {
+  border-color: #144371;
+  background: white;
+  color: #144371;
+}
+
+
+.list-3 .list-barangs {
+  display: none;
+  /* position: absolute; */
+  padding: 0 10px;
+  margin: 8px 10px 0;
+  border-radius: 7px;
+  background: ghostwhite;
+  width: 100%;
+  color: #144371;
+}
+
+.list-barangs p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.search-tab {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4px;
+}
+.search-tab .tab-1 {
+  margin: 0 auto;
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tab-1 i{
+  background: none;
+  width: 100%;
+  text-align: center;
+  margin: 0 3px;
+  padding: 4px;
+  border-radius: 7px;
+  color: #144371;
+  border: 2px solid #144371;
+  transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tab-1 i.on {
+  background: #144371;
+  color: white;
+  padding: 8px;
+}
+
+.tab-1 i.fa-palette {
+  animation: colors 9s ease-in-out infinite;
+}
+@keyframes colors {
+  0% { color: red;}
+  10% { color: yellow}
+  30% { color: lawngreen;}
+  50% { color: darkcyan;}
+  70% { color: deeppink;}
+  90% { color: red;}
+  100% { color: red;}
+}
+.tab-2 {
+  margin-top: 10px;
+  /*border-radius: 10px;*/
+  padding: 15px 6px;
+  border-top: 2px solid #144371;
+  /* border-bottom: 2px solid #144371;*/
+  background: #144371;
+}
+.tab-2 .calendar {
+  display: none;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.calendar .cal-1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+.cal-1 label {
+  font-size: 13px;
+  color: white;
+}
+.cal-1 input {
+  border: 2px solid white;
+  color: white;
+  border-radius: 5px;
+  background: transparent;
+  text-align: center;
+}
+.calendar .cal-2 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.cal-2 div{
+  display: flex;
+  justify-content: flex-start;
+  align-content: middle;
+  align-items: flex-end;
+  font-size: 12px;
+  color: white;
+}
+
+.tab-2 button {
+  padding: 5px 20px;
+  margin: 5px auto;
+  display: block;
+  border-radius: 7px;
+  border-width: 2px;
+  background: white;
+}
+.tab-2 div input[type="text"] {
+  margin: 3px auto;
+  display: block;
+  width: 85%;
+  padding: 5px 12px;
+  border: 2px solid white;
+  color: #144371;
+  background: ghostwhite;
+  border-radius: 6px;
+}
+.tab-2 div input[type="text"]::placeholder {
+
+}
+
+.user {
+  
+}
+
+
+
+.goods {
+  display: none;
+}
+.goods button#search-goods {
+  padding: 5px 10px;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.colorers {
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.colorers .colors {
+  height: 35px;
+  width: 35px;
+  background: red;
+  border-radius: 7px;
+  border: 1px solid white;
+  transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.colorers .colors.on {
+  height: 40px;
+  width: 40px;
+  border-width: 4px;
+}
